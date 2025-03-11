@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: m365teikp-python
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: rhtap-quay-quay-rhtap-quay.apps.b671cd0c-3a92-438c-8835-61517b45dcb8.prod.konfluxeaas.com/rhtap/rhtap-qe-python:b2afc37f6c0f8c7c8e23bafbda61ffc6bc13e2c7@sha256:ee8f88e25adbbb33fe21ccc8260fab74a84a6a272f84220ed345c169238cd459
+          name: container-image
